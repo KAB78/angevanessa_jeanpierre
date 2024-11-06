@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage d'Ange Vanessa & Jean-Pierre</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --light-gold: #F4E7BE;
+            --beige: #F5F5DC;
+            --dark-gold: #996515;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        body {
+            background-color: var(--beige);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('C:\Users\Perso\Pictures\Njoh_1.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(212,175,55,0.3), rgba(245,245,220,0.3));
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .date-lieu {
+            font-size: 1.8em;
+            margin-bottom: 40px;
+        }
+
+        .countdown {
+            background: rgba(255,255,255,0.9);
+            padding: 2em;
+            border-radius: 10px;
+            color: var(--dark-gold);
+            margin-top: 2em;
+            display: flex;
+            gap: 2em;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        nav {
+            background-color: rgba(255,255,255,0.95);
+            padding: 1.5em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3em;
+        }
+
+        nav a {
+            color: var(--dark-gold);
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .section {
+            padding: 5em 3em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--dark-gold);
+            font-size: 2.5em;
+            margin-bottom: 2.5em;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 2em;
+            background: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			text-align: center;
+        }
+
+        .img {
+            height: 400px;
+			text-align: center;
+            <!-- background: #eee;
+            border-radius: 8px; -->
+        }
+		
+		.galery {
+            height: 400px;
+			text-align: center;
+            <!-- background: #eee;
+            border-radius: 8px; -->
+        }
+
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3em;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 1em;
+            margin-top: 0.5em;
+            border: 1px solid var(--light-gold);
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: var(--gold);
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--dark-gold);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2em;
+            padding: 2em;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .guestbook {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guestbook-entry {
+            background: white;
+            padding: 2em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: var(--dark-gold);
+            color: white;
+            text-align: center;
+            padding: 3em;
+            margin-top: 3em;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1em;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .countdown {
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            .location-container {
+                grid-template-columns: 1fr;
+            }
+			
+		.galery img {
+			width: 400px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s ease;
+			}
+
+		.galery img:hover {
+			transform: scale(1.05);
+			}
+		
+		.modal {
+			display: none; /* Masqué par défaut */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		  }
+
+		 .modal.active {
+			opacity: 1;
+			pointer-events: all;
+			display: flex;
+		  }
+
+		 .modal-content {
+			width: 600px;
+			height: 400px;
+			object-fit: cover;
+			border: 3px solid white;
+			box-shadow: 0 0 20px rgba(0,0,0,0.5);
+		  }
+
+		  .modal.active .modal-content {
+			transform: scale(1);
+		  }
+
+		  .close {
+			position: absolute;
+			top: 20px;
+			right: 35px;
+			color: white;
+			font-size: 30px;
+			font-weight: bold;
+			cursor: pointer;
+		  }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#notre-histoire">Notre Histoire</a></li>
+            <li><a href="#lieu">Lieu</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#galery">Galérie</a></li>
+            <li><a href="#livre-or">Livre d'Or</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <div class="header-content">
+            <h1>Ange Vanessa & Jean-Pierre</h1>
+				<p>Célébrons notre Amour dans un cadre élégant sous le signe de la beauté et l'élégance</p>
+            <div class="date-lieu">
+                <p>15 Février 2025 | Douala, Cameroun</p>
+                <!-- <p>Douala, Cameroun</p> -->
+            </div>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div>Jours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div>Heures</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div>Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div>Secondes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="notre-histoire" class="section">
+        <h2 class="section-title">Notre Histoire</h2>
+        <div class="story-content">
+            [Votre histoire d'amour ici]
+        </div>
+    </section>
+
+    <section id="lieu" class="section">
+        <h2 class="section-title">Lieu de Réception</h2>
+        <div class="location-container">
+            <div class="location-info">
+                <h3>La Cérémonie Réligieuse</h3>
+                <div class="ceremony-details">
+              <p>Cathédrale Saint-Pierre et Saint-Paul de Douala | Boulevard de la Liberté | 13h00 - 15h00</p>
+
+                
+                <h3>Le Dîner Dansant</h3>
+                <p>Hôtel Best Western - Aéroport de Douala | 19h00 - 04h00</p>
+            </div>
+            <div class="img">
+				
+					<img src="C:\Users\Perso\Pictures\Carte.png" alt="L'itinéraire" width="400" align="center"/>
+					
+            </div>
+        </div>
+    </section>
+	
+	<<!-- section id="galery" class="section">
+		<h2 class="section-title">Galérie Photos</h2>
+			<div class="galery">
+					<img src="C:\Users\Perso\Pictures\Njoh_1.png"  width="400" align="center"/>
+					<img src="C:\Users\Perso\Pictures\Njoh_2.png"  width="400" align="center"/>
+            </div>
+	</section> -->
+	
+	<section id="galery" class="section">
+    <h2 class="section-title">Galérie Photos</h2>
+    <div class="galery">
+		<img src="C:\Users\Perso\Pictures\Njoh_1.png" width="400" onclick="openModal(this)" alt="Photo 1" />
+        <img src="C:\Users\Perso\Pictures\Njoh_2.png" width="400" onclick="openModal(this)" alt="Photo 2" />
+    </div>
+</section>
+
+<!-- Fenêtre modale pour afficher l'image en grand -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+    <!-- Mise à jour du formulaire RSVP -->
+<section id="rsvp" class="section">
+    <h2 class="section-title">RSVP</h2>
+    <form class="rsvp-form" onsubmit="sendEmail(event)">
+        <div class="form-group">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="presence">Serez-vous présent(e) ?</label>
+            <select id="presence" name="presence" required>
+                <option value="">Choisir...</option>
+                <option value="oui">Oui, je serai présent(e)</option>
+                <option value="non">Non, je ne pourrai pas être présent(e)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="accompagnants">Nombre d'accompagnants</label>
+            <input type="number" id="accompagnants" name="accompagnants" min="0" value="0">
+        </div>
+        <!-- <div class="form-group">
+            <label for="message">Message pour les mariés</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div> -->
+        <button type="submit">Confirmer ma présence</button>
+    </form>
+</section>
+
+<script>
+function sendEmail(event) {
+    event.preventDefault();
+    
+    const formData = {
+        nom: document.getElementById('nom').value,
+        email: document.getElementById('email').value,
+        presence: document.getElementById('presence').value,
+        accompagnants: document.getElementById('accompagnants').value,
+        <!-- message: document.getElementById('message').value == Message : ${formData.message}-->
+    };
+
+    // Construction du lien mailto
+    const subject = `RSVP Mariage - ${formData.nom}`;
+    const body = `
+Confirmation de présence de : ${formData.nom}
+Présence : ${formData.presence}
+Nombre d'accompagnants : ${formData.accompagnants}
+Email : ${formData.email}
+
+    `;
+
+    const mailtoLink = `mailto:juletou03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+}
+</script>
+
+    <section id="livre-or" class="section">
+        <h2 class="section-title">Livre d'Or</h2>
+        <div class="guestbook">
+            <form class="rsvp-form">
+                <div class="form-group">
+                    <label for="guestbook-message">Laissez un message aux mariés</label>
+                    <textarea id="guestbook-message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="guestbook-name">Votre nom</label>
+                    <input type="text" id="guestbook-name" required>
+                </div>
+                <button type="submit">Publier le message</button>
+            </form>
+            
+            <div class="guestbook-entries">
+                <!-- Les messages seront ajoutés ici dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Mariage d'Ange Vanessa & Jean-Pierre</p>
+        <p>&copy; Samedi, 15 Février 2025 - Douala, Cameroun. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Compte à rebours
+        function updateCountdown() {
+            const weddingDate = new Date('2025-02-15T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Animation de la navigation au scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.8)';
+            }
+        });
+    </script>
+	
+	<script>
+		// Fonction pour ouvrir la modale et afficher l'image agrandie
+    function openModal(img) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+    }
+
+    // Fonction pour fermer la modale
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    // Fermer la modale en cliquant en dehors de l'image
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+				closeModal();
+            <!-- modal.style.display = "none"; -->
+        }
+    }
+	</script>
+</body>
+</html>
