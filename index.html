@@ -249,13 +249,6 @@
                 gap: 1em;
 				display: block; /* Affiche la barre normale */
 				}
-				
-			.mobile-menu {
-				display: none; /* Cache la liste déroulante */
-				}
-			 <!--  .header h1 {
-				font-size: 2em;
-			  } -->
 			}
 			
 		 .gallery img {
@@ -284,25 +277,24 @@
 				gap: 2em;
 				list-style: none;
 			}
+				
+			.mobile-menu {
+				display: none; /* Cache la liste déroulante */
+				}
 			
 			@media (max-width: 480px) {
 			  nav ul {
 				flex-direction: column;
 				gap: 1em;
+				display: block; /* Affiche la liste déroulante par défaut */
 			  }
 			  
 			  .desktop-menu {
 				display: none; /* Masque la barre de menu classique */
 				}
 				
-				.mobile-menu {
-				display: block; /* Affiche la liste déroulante par défaut */
 			}
 
-			  <!-- .header {
-				height: auto;
-			  } -->
-			}
 
 		.galery img:hover {
 			transform: scale(1.05);
