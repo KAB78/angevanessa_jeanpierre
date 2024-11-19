@@ -255,16 +255,16 @@
 				width: 100%;
 				height: auto;
 			  }
-			  
-			 nav ul {
-				display: none; /* Cache la barre normale */
+			}
+			
+			nav ul {
+				display: block; /* Affiche la barre normale */
 				}
 
 			#menu {
-				display: block; /* Affiche la liste déroulante */
+				display: none; /* Cache la liste déroulante */
 				}
-			}
-			
+				
 			.desktop-menu {
 				display: none; /* Masque la barre de menu classique */
 				}
@@ -279,6 +279,7 @@
 					color: var(--dark-gold);
 					border-radius: 5px;
 				}
+				
 			.desktop-menu {
 				display: flex; /* Affiche le menu sous forme de liste */
 				justify-content: center;
