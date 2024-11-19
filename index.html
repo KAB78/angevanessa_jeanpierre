@@ -92,7 +92,8 @@
             padding: 1.5em;
             position: fixed;
             width: 100%;
-            top: 0;
+            top: 10px;
+			left: 10px;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -114,6 +115,15 @@
         nav a:hover {
             color: var(--gold);
         }
+		
+		#menu {
+			font-size: 1.2em;
+			padding: 0.5em;
+			border: 1px solid var(--gold);
+			background-color: var(--light-gold);
+			color: var(--dark-gold);
+			border-radius: 5px;
+		}
 
         .section {
             padding: 5em 3em;
@@ -255,6 +265,13 @@
 				width: 100%;
 				height: auto;
 			  }
+			 nav ul {
+				display: none; /* Cache la barre normale */
+				}
+
+			#menu {
+				display: block; /* Affiche la liste déroulante */
+				}
 			}
 
 			
@@ -319,16 +336,22 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#notre-histoire">Notre Histoire</a></li>
-            <li><a href="#lieu">Lieu</a></li>
-            <li><a href="#rsvp">RSVP</a></li>
-            <li><a href="#galery">Galérie</a></li>
-            <li><a href="#livre-or">Livre d'Or</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <select id="menu" onchange="location = this.value;">
+        <option value="#accueil">Accueil</option>
+        <option value="#notre-histoire">Notre Histoire</option>
+        <option value="#lieu">Lieu</option>
+        <option value="#rsvp">RSVP</option>
+        <option value="#galery">Galérie</option>
+        <option value="#livre-or">Livre d'Or</option>
+        <option value="#contact">Contact</option>
+    </select>
+</nav>
+
+<script>
+    document.getElementById("menu").addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+</script>
 
     <div class="header">
         <div class="header-content">
