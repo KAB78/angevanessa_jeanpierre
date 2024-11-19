@@ -247,9 +247,13 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 1em;
-				display: block; /* Affiche la barre normale */
+				}
 				
-			#menu {
+			.mobile-menu {
+				display: block; /* Affiche la barre normale */
+				}
+				
+			.desktop-menu {
 				display: none; /* Cache la liste déroulante */
 				}
 			 <!--  .header h1 {
@@ -278,7 +282,7 @@
 				}
 				
 			.desktop-menu {
-				display: flex; /* Affiche le menu sous forme de liste */
+				display: block; /* Affiche le menu sous forme de liste */
 				justify-content: center;
 				gap: 2em;
 				list-style: none;
@@ -295,7 +299,7 @@
 				}
 				
 				.mobile-menu {
-				display: none; /* Masque la liste déroulante par défaut */
+				display: block; /* Affiche la liste déroulante par défaut */
 			}
 
 			  <!-- .header {
