@@ -243,32 +243,30 @@
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 1em;
-            }
+            body {
+				font-size: 14px;
+			  }
 
-            .header h1 {
-                height: auto;
-            }
+			  .header h1 {
+				font-size: 2em;
+			  }
 
-            .countdown {
-                flex-direction: column;
-                gap: 1em;
-            }
-
-            <!-- .location-container {
-                grid-template-columns: 1fr;
-            } -->
-			
+			  .gallery img {
+				width: 100%;
+				height: auto;
+			  }
 			}
+
 			
-		.galery img {
-			width: 400px;
-            cursor: pointer;
-            margin: 10px;
-            transition: transform 0.2s ease;
+			@media (max-width: 480px) {
+			  nav ul {
+				flex-direction: column;
+				gap: 1em;
+			  }
+
+			  .header {
+				height: auto;
+			  }
 			}
 
 		.galery img:hover {
