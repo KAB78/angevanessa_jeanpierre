@@ -243,23 +243,25 @@
         }
 
         @media (max-width: 768px) {
-            body {
-				font-size: 14px;
-			  }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1em;
+				display: block; /* Affiche la barre normale */
 
 			 <!--  .header h1 {
 				font-size: 2em;
 			  } -->
-
-			  .gallery img {
-				width: 100%;
-				height: auto;
-			  }
 			}
 			
-			nav ul {
+		 .gallery img {
+				width: 100%;
+				height: auto;
+			 }
+			  
+			<!-- nav ul {
 				display: block; /* Affiche la barre normale */
-				}
+				} -->
 
 			#menu {
 				display: none; /* Cache la liste déroulante */
