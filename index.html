@@ -108,7 +108,7 @@
 		
 		#menu {
 			font-size: 1.2em;
-			padding: 0.2em;
+			padding: 0.5em;
 			border: 1px solid var(--gold);
 			background-color: var(--light-gold);
 			color: var(--dark-gold);
@@ -255,6 +255,7 @@
 				width: 100%;
 				height: auto;
 			  }
+			  
 			 nav ul {
 				display: none; /* Cache la barre normale */
 				}
@@ -262,6 +263,32 @@
 			#menu {
 				display: block; /* Affiche la liste déroulante */
 				}
+				
+			.desktop-menu {
+				display: none; /* Masque la barre de menu classique */
+				}
+
+				.mobile-menu {
+					display: block; /* Affiche la liste déroulante */
+					margin: 10px;
+					padding: 10px;
+					font-size: 1.2em;
+					border: 1px solid var(--gold);
+					background-color: var(--light-gold);
+					color: var(--dark-gold);
+					border-radius: 5px;
+				}
+			}
+			
+			.desktop-menu {
+				display: flex; /* Affiche le menu sous forme de liste */
+				justify-content: center;
+				gap: 2em;
+				list-style: none;
+			}
+
+			.mobile-menu {
+				display: none; /* Masque la liste déroulante par défaut */
 			}
 
 			
@@ -325,8 +352,23 @@
     </style>
 </head>
 <body>
+
+	<nav>
+    <!-- Barre de menu classique -->
+    <ul class="desktop-menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#notre-histoire">Notre Histoire</a></li>
+        <li><a href="#lieu">Lieu</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#galery">Galérie</a></li>
+        <li><a href="#livre-or">Livre d'Or</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+	
     <nav>
-    <select id="menu" onchange="location = this.value;">
+    <!-- Liste déroulante pour smartphones -->
+    <select class="mobile-menu" id="mobile-menu" onchange="location = this.value;">
+        <option value="">Menu</option>
         <option value="#accueil">Accueil</option>
         <option value="#notre-histoire">Notre Histoire</option>
         <option value="#lieu">Lieu</option>
@@ -338,10 +380,13 @@
 </nav>
 
 <script>
-    document.getElementById("menu").addEventListener("change", function() {
-        window.location.href = this.value;
+    document.getElementById("mobile-menu").addEventListener("change", function() {
+        if (this.value) {
+            window.location.href = this.value;
+        }
     });
 </script>
+
 
     <div class="header">
         <div class="header-content">
