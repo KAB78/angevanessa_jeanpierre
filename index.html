@@ -246,64 +246,33 @@
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                <!-- flex-direction: column;
-                text-align: center;
-                gap: 1em; -->
-				display: block; /* Affiche la barre normale */
-				
-				}
-				
-			#menu {
-				display: none; /* Affiche la liste déroulante */
-				}
-			
-			
-		 <!-- .gallery img {
-				width: 100%;
-				height: auto;
-			 } -->
-
+            .desktop-menu {
+				display: none;
+			}
 			.mobile-menu {
-					display: none; /* Affiche la liste déroulante */
-					margin: 10px;
-					padding: 10px;
-					font-size: 1.2em;
-					border: 1px solid var(--gold);
-					background-color: var(--light-gold);
-					color: var(--dark-gold);
-					border-radius: 5px;
-				}
-				
-			.desktop-menu {
-				display: block; /* Affiche le menu sous forme de liste */
-				justify-content: center;
-				gap: 2em;
-				list-style: none;
+				display: block;
+				margin: 0 auto;
 			}
-				
-			<!-- .mobile-menu {
-				display: none; /* Cache la liste déroulante */
-				} -->
-			  
-			  <!-- .desktop-menu {
-			  display: block; /* Affiche la liste déroulante par défaut */
-				display: none; /* Masque la barre de menu classique */
-				} -->
-				
+
 			.header h1 {
-                font-size: 2.5em;
-            }
-
-            .countdown {
-                flex-direction: column;
-                gap: 1em;
-            }
-
-
-		.galery img:hover {
-			transform: scale(1.05);
+				font-size: 2.5em;
 			}
+
+			.countdown {
+				flex-direction: column;
+			}
+		
+		@media (orientation: landscape) and (max-width: 768px) {
+			.header {
+				height: 70vh;
+			}
+
+			.gallery img {
+				max-height: 50vh;
+			}
+		<!-- .galery img:hover {
+			transform: scale(1.05);
+			} -->
 		
 		.modal {
 			display: none; /* Masqué par défaut */
@@ -347,6 +316,7 @@
 			cursor: pointer;
 		  }
         }
+		
     </style>
 </head>
 <body>
