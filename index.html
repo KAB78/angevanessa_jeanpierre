@@ -35,7 +35,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: beige;
             text-align: center;
             position: relative;
         }
@@ -65,6 +65,7 @@
             margin-top: 2em;
             display: flex;
             gap: 2em;
+			justify-content: center;
         }
 
         .countdown-item {
@@ -93,7 +94,7 @@
             display: flex;
             justify-content: center;
             gap: 3em;
-			display: block; /* Affiche la barre normale */
+			
         }
 
         nav a {
@@ -114,6 +115,7 @@
 			background-color: var(--light-gold);
 			color: var(--dark-gold);
 			border-radius: 5px;
+			display: block; /* Affiche la liste déroulante */
 		}
 
         .section {
@@ -245,28 +247,25 @@
 
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column;
+                <!-- flex-direction: column;
                 text-align: center;
-                gap: 1em;
+                gap: 1em; -->
+				display: block; /* Affiche la barre normale */
 				
 				}
 				
 			#menu {
-				display: block; /* Affiche la liste déroulante */
+				display: none; /* Affiche la liste déroulante */
 				}
-			}
+			
 			
 		 <!-- .gallery img {
 				width: 100%;
 				height: auto;
 			 } -->
-			  
-			nav ul {
-				display: block; /* Affiche la barre normale */
-				}
 
 			.mobile-menu {
-					display: block; /* Affiche la liste déroulante */
+					display: none; /* Affiche la liste déroulante */
 					margin: 10px;
 					padding: 10px;
 					font-size: 1.2em;
@@ -292,7 +291,14 @@
 				display: none; /* Masque la barre de menu classique */
 				} -->
 				
-			
+			.header h1 {
+                font-size: 2.5em;
+            }
+
+            .countdown {
+                flex-direction: column;
+                gap: 1em;
+            }
 
 
 		.galery img:hover {
@@ -340,7 +346,7 @@
 			font-weight: bold;
 			cursor: pointer;
 		  }
-        
+        }
     </style>
 </head>
 <body>
@@ -385,7 +391,6 @@
 				<p>Célébrons notre Amour dans un cadre élégant sous le signe de la beauté et l'élégance</p>
             <div class="date-lieu">
                 <p>15 Février 2025 | Douala, Cameroun</p>
-                <!-- <p>Douala, Cameroun</p> -->
             </div>
             <div class="countdown">
                 <div class="countdown-item">
