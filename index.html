@@ -88,7 +88,7 @@
         }
 
         nav {
-            background-color: rgba(255,255,255,0);
+            <!-- background-color: rgba(255,255,255,0); -->
             padding: 1.5em;
             position: fixed;
             width: 100%;
@@ -273,17 +273,17 @@
                 display: block;
             }
 			
-            .desktop-menu {
+           <!--  .desktop-menu {
 				flex-direction: fixe;
-			}
+			} -->
 			
 			.header h1 {
 				font-size: 1.5em;
 			}
 			
-			.desktop-menu {
+			<!-- .desktop-menu {
                 margin-left: 0;
-            }
+            } -->
 			
 			.mobile-menu.active {
                 transform: translateX(0);
@@ -303,7 +303,7 @@
 			transform: scale(1.05);
 			} -->
 		
-		.modal {
+		<!-- .modal {
 			display: none; /* Masqué par défaut */
             position: fixed;
             z-index: 1000;
@@ -333,7 +333,7 @@
 
 		  .modal.active .modal-content {
 			transform: scale(1);
-		  }
+		  } -->
 
 		  .close {
 			position: absolute;
@@ -364,7 +364,7 @@
 	
     <!-- Liste déroulante pour smartphones -->
     <select class="mobile-menu" id="mobile-menu" onchange="location = this.value;">
-        <option value="">Menu</option>
+        <option value="☰">Menu</option>
         <option value="#accueil">Accueil</option>
         <option value="#notre-histoire">Notre Histoire</option>
         <option value="#lieu">Lieu</option>
