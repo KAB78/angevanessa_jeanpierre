@@ -77,6 +77,15 @@
             font-weight: bold;
             color: var(--gold);
         }
+		
+		.menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
 
         nav {
             background-color: rgba(255,255,255,0.95);
@@ -244,28 +253,41 @@
             padding: 3em;
             margin-top: 3em;
         }
+		
+		.desktop-menu {
+            margin-left: 250px;
+            padding: 80px 20px 20px;
+        }
 
         @media (max-width: 768px) {
+			.menu-toggle {
+                display: block;
+            }
+			
             .desktop-menu {
-				display: none;
+				flex-direction: column;
 			}
+			
 			.mobile-menu {
-				display: block;
-				margin: 0 auto;
+				transform: translateX(-100%);
+                width: 100%;
+                max-width: 300px;
+                border-radius: 10px;
+				box-shadow: 25px 0px 20px -20px rgba(0,0,0,0.45),
+				-25px 0px 20px -20px rgba(0,0,0,0.45);
 			}
 
 			.header h1 {
 				font-size: 2.5em;
 			}
-
-			.countdown {
-				flex-direction: column;
-			}
-		
-		@media (orientation: landscape) and (max-width: 768px) {
-			.header {
-				height: 70vh;
-			}
+			
+			.desktop-menu {
+                margin-left: 0;
+            }
+			
+			.mobile-menu.active {
+                transform: translateX(0);
+            }
 
 			.gallery img {
 				max-height: 50vh;
@@ -320,7 +342,7 @@
     </style>
 </head>
 <body>
-
+	
 	<nav>
     <!-- Barre de menu classique -->
     <ul class="desktop-menu">
@@ -335,7 +357,7 @@
 	
     <!-- Liste déroulante pour smartphones -->
     <select class="mobile-menu" id="mobile-menu" onchange="location = this.value;">
-        <option value="">Menu</option>
+        <!-- <option value="">Menu</option> -->
         <option value="#accueil">Accueil</option>
         <option value="#notre-histoire">Notre Histoire</option>
         <option value="#lieu">Lieu</option>
@@ -347,11 +369,19 @@
 </nav>
 
 <script>
-    document.getElementById("mobile-menu").addEventListener("change", function() {
-        if (this.value) {
-            window.location.href = this.value;
-        }
-    });
+		const menuToggle = document.querySelector('.menu-toggle');
+        const mobile-menu = document.querySelector('.mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobile-menu.classList.toggle('active');
+        });
+
+        // Ferme le menu si on clique en dehors
+        document.addEventListener('click', (e) => {
+            if (!mobile-menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                mobile-menu.classList.remove('active');
+            }
+        });
 </script>
 
 
@@ -572,6 +602,7 @@ Email : ${formData.email}
             <!-- modal.style.display = "none"; -->
         }
     }
+	
 	</script>
 </body>
 </html>
