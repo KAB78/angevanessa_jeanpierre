@@ -124,7 +124,7 @@
 			background-color: var(--light-gold);
 			color: var(--dark-gold);
 			border-radius: 5px;
-			display: block; /* Affiche la liste déroulante */
+			<!-- display: block; /* Affiche la liste déroulante */ -->
 		}
 
         .section {
@@ -273,8 +273,7 @@
                 width: 100%;
                 max-width: 300px;
                 border-radius: 10px;
-				box-shadow: 25px 0px 20px -20px rgba(0,0,0,0.45),
-				-25px 0px 20px -20px rgba(0,0,0,0.45);
+				box-shadow: 2px 0 5px rgba(0,0,0,0.2);
 			}
 
 			.header h1 {
@@ -288,6 +287,13 @@
 			.mobile-menu.active {
                 transform: translateX(0);
             }
+			
+			.location-container {
+				display: flex;
+				  height: 100%;
+				  justify-content: center;
+				  align-items: center;
+				}
 
 			.gallery img {
 				max-height: 50vh;
@@ -357,7 +363,7 @@
 	
     <!-- Liste déroulante pour smartphones -->
     <select class="mobile-menu" id="mobile-menu" onchange="location = this.value;">
-        <!-- <option value="">Menu</option> -->
+        <option value="">Menu</option>
         <option value="#accueil">Accueil</option>
         <option value="#notre-histoire">Notre Histoire</option>
         <option value="#lieu">Lieu</option>
