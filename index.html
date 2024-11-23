@@ -88,7 +88,7 @@
         }
 
         nav {
-            background-color: rgba(255,255,255,0.95);
+            background-color: rgba(255,255,255,0);
             padding: 1.5em;
             position: fixed;
             width: 100%;
@@ -257,7 +257,16 @@
 		.desktop-menu {
             margin-left: 250px;
             padding: 80px 20px 20px;
+			color: rgba(255,255,255,0)
         }
+		
+		.mobile-menu {
+				transform: translateX(-100%);
+                width: 100%;
+                max-width: 300px;
+                border-radius: 10px;
+				box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+			}
 
         @media (max-width: 768px) {
 			.menu-toggle {
@@ -268,14 +277,6 @@
 				flex-direction: column;
 			}
 			
-			.mobile-menu {
-				transform: translateX(-100%);
-                width: 100%;
-                max-width: 300px;
-                border-radius: 10px;
-				box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-			}
-
 			.header h1 {
 				font-size: 2.5em;
 			}
@@ -432,12 +433,12 @@
             <div class="location-info">
                 <h3>La Cérémonie Réligieuse</h3>
                 <div class="ceremony-details">
-              <p>Cathédrale Saint-Pierre et Saint-Paul de Douala | Boulevard de la Liberté | 13h00 - 15h00</p>
-
-                
+              <p>Cathédrale Saint-Pierre et Saint-Paul de Douala | Boulevard de la Liberté | 13h00 - 15h00</p> <br>
                 <h3>Le Dîner Dansant</h3>
                 <p>Hôtel Best Western - Aéroport de Douala | 19h00 - 04h00</p>
             </div>
+			 <br>
+			 <br>
             <div class="img">
 				
 					<img src="./images/carte.png" alt="L'itinéraire" width="400" align="center">
@@ -445,14 +446,6 @@
             </div>
         </div>
     </section>
-	
-	<<!-- section id="galery" class="section">
-		<h2 class="section-title">Galérie Photos</h2>
-			<div class="galery">
-					<img src="C:\Users\Perso\Pictures\Njoh_1.png"  width="400" align="center"/>
-					<img src="C:\Users\Perso\Pictures\Njoh_2.png"  width="400" align="center"/>
-            </div>
-	</section> -->
 	
 	<section id="galery" class="section">
     <h2 class="section-title">Galérie Photos</h2>
@@ -515,10 +508,10 @@ function sendEmail(event) {
     // Construction du lien mailto
     const subject = `RSVP Mariage - ${formData.nom}`;
     const body = `
-Confirmation de présence de : ${formData.nom}
-Présence : ${formData.presence}
-Nombre d'accompagnants : ${formData.accompagnants}
-Email : ${formData.email}
+	Confirmation de présence de : ${formData.nom}
+	Présence : ${formData.presence}
+	Nombre d'accompagnants : ${formData.accompagnants}
+	Email : ${formData.email}
 
     `;
 
