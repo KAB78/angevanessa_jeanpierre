@@ -3,19 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage d'Ange Vanessa & Jean-Pierre</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --gold: #D4AF37;
+            --light-gold: #F4E7BE;
+            --beige: #F5F5DC;
+            --dark-gold: #996515;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Cormorant Garamond', serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
+            background-color: var(--beige);
+            color: #333;
+            line-height: 1.5;
         }
+		
 
         .header {
-            background: #333;
+			background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./images/njoh3_1.png');
+            background-position: center;
+            background-size: 1200px 1800px;
+            position: relative;
+            height: 100vh;
+			
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: beige;
+            display: flex;
+			justify-content: space-between;
+            align-items: center;
+        }
+		
+		<!-- .header {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./images/njoh3.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        } -->
+		
+		.headers {
+            background: var(--gold);
             color: white;
             padding: 1rem;
             position: fixed;
@@ -65,6 +108,190 @@
             margin-left: 250px;
             padding: 80px 20px 20px;
         }
+		
+		.header-content {
+            position: center;
+            z-index: 1;
+		}
+		
+		.header h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+		
+		.hero-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+		
+		 .section {
+            padding: 5em 3em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--dark-gold);
+            font-size: 2.5em;
+            margin-bottom: 2.5em;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: auto;
+			justify-content: center;
+            gap: 2em;
+            background: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			text-align: center;
+        }
+
+        .img {
+            height: 400px;
+			width : auto;
+			text-align: center;
+         
+            border-radius: 8px;
+        }
+		
+		.rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3em;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 1em;
+            margin-top: 0.5em;
+            border: 1px solid var(--light-gold);
+            border-radius: 4px;
+            font-size: 1em;
+        }
+		
+		.guestbook {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+		
+		.guestbook-entry {
+            background: white;
+            padding: 2em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: var(--gold);
+            color: white;
+            text-align: center;
+            padding: 3em;
+            margin-top: 3em;
+        }
+		
+		.date-lieu {
+            font-size: 1.8em;
+            margin-bottom: 40px;
+        }
+		
+		.countdown {
+            background: rgba(255,255,255,0.9);
+            padding: 2em;
+            border-radius: 10px;
+            color: var(--dark-gold);
+            margin-top: 2em;
+            display: flex;
+            gap: 2em;
+			justify-content: center;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--gold);
+        }
+		
+		button {
+            background-color: var(--gold);
+            color: white;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--dark-gold);
+        }
+		
+		#cache {
+			position:absolute;
+			background:rgba(0,0,0,0);
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			z-index: -1;
+			transition:background .5s
+		}
+		#cache:target {
+			background:rgba(0,0,0,.5);
+			z-index: 1;
+		}
+		.popup {
+			position:absolute;
+			z-index: 1000;
+			display:none;
+			top:30px;
+			left:300px;
+		}
+		.popup a {
+			position:absolute;
+			background: #333;
+			color:#fff;
+			border-radius: 50%;
+			width:20px;
+			line-height: 20px;
+			text-align: center;
+			font-family:arial;
+			right:0;
+			text-decoration: none;
+		}
+		#cache:target ~ .popup {
+			display:block;
+		}
+		
 
         @media (max-width: 768px) {
             .menu-toggle {
@@ -85,43 +312,252 @@
             .content {
                 margin-left: 0;
             }
+			
+			.header h1 {
+				font-size: 2.5em;
+			}
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <headers class="headers">
         <button class="menu-toggle">☰</button>
-        <h1>Mon Site</h1>
-    </header>
+        <h1>Notre Union</h1>
+    </headers>
 
     <nav class="sidebar">
+		<!-- Barre de menu classique -->
         <ul class="nav-list">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#produits">Produits</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#notre-histoire">Notre Histoire</a></li>
+        <li><a href="#lieu">Lieu</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#galery">Galérie Photos</a></li>
+        <li><a href="#livre-or">Livre d'Or</a></li>
+        <li><a href="#contact">Contact</a></li>
         </ul>
+		
+		<!-- Liste déroulante pour smartphones -->
+    <!-- <select class="menu-toggle" id="menu-toggle" onchange="location = this.value;"> -->
+    <select class="menu-toggle">    
+        <option value="#accueil">Accueil</option>
+        <option value="#notre-histoire">Notre Histoire</option>
+        <option value="#lieu">Lieu</option>
+        <option value="#rsvp">RSVP</option>
+        <option value="#galery">Galérie  Photos</option>
+        <option value="#livre-or">Livre d'Or</option>
+        <option value="#contact">Contact</option>
+    </select>
     </nav>
 
-    <main class="content">
+   <!--  <main class="content">
         <h2>Contenu Principal</h2>
         <p>Votre contenu ici...</p>
-    </main>
+    </main> -->
 
+<main class="content">
+	<section id="accueil">	
+		<div class="header">
+			<div class="header-content">
+				<h2>Ange Vanessa & Jean-Pierre</h2>
+					<p>Célébrons notre Amour dans un cadre élégant sous le signe de la beauté et l'élégance</p>
+				<div class="date-lieu">
+					<p>15 Février 2025 | Douala, Cameroun</p>
+				</div>
+				<div class="countdown">
+					<div class="countdown-item">
+						<div class="countdown-number" id="days">00</div>
+						<div>Jours</div>
+					</div>
+					<div class="countdown-item">
+						<div class="countdown-number" id="hours">00</div>
+						<div>Heures</div>
+					</div>
+					<div class="countdown-item">
+						<div class="countdown-number" id="minutes">00</div>
+						<div>Minutes</div>
+					</div>
+					<div class="countdown-item">
+						<div class="countdown-number" id="seconds">00</div>
+						<div>Secondes</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	 <section id="notre-histoire" class="section">
+        <h3 class="section-title">Notre Histoire</h2>
+        <div class="story-content">
+            [Votre histoire d'amour ici]
+        </div>
+    </section>
+
+    <section id="lieu" class="section">
+        <h4 class="section-title">Lieu de Réception</h4>
+        <div class="location-container">
+            <div class="location-info">
+                <h4>La Cérémonie Réligieuse</h4>
+                <div class="ceremony-details">
+              <p>Cathédrale Saint-Pierre et Saint-Paul de Douala | Boulevard de la Liberté | 13h00 - 15h00</p> <br>
+                <h4>Le Dîner Dansant</h4>
+                <p>Hôtel Best Western - Aéroport de Douala | 19h00 - 04h00</p>
+            </div>
+			 <br>
+			 <br>
+            <div class="img">
+					<a href="./images/carte.png">
+					<img src="./images/carte.png"  alt="L'itinéraire" height="400" width="600" align="center">
+					
+					</a>
+            </div>
+        </div>
+    </section>
+	
+	<section id="galery" class="section">
+		<h2 class="section-title">Galérie Photos</h2>
+		<div class="galery">
+			<img src="./images/njoh1.png" alt="Photo 1">
+			<img src="./images/njoh2.png" alt="Photo 2">
+		</div>
+	</section>
+
+    <!-- Mise à jour du formulaire RSVP -->
+		<section id="rsvp" class="section">
+			<h3 class="section-title">RSVP</h3>
+			<form class="rsvp-form" onsubmit="sendEmail(event)">
+				<div class="form-group">
+					<label for="nom">Nom complet</label>
+					<input type="text" id="nom" name="nom" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="presence">Serez-vous présent(e) ?</label>
+					<select id="presence" name="presence" required>
+						<option value="">Choisir...</option>
+						<option value="oui">Oui, je serai présent(e)</option>
+						<option value="non">Non, je ne pourrai pas être présent(e)</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="accompagnants">Nombre d'accompagnants</label>
+					<input type="number" id="accompagnants" name="accompagnants" min="0" value="0">
+				</div>
+				<button type="submit">Confirmer ma présence</button>
+			</form>
+		</section>
+
+	<script>
+		function sendEmail(event) {
+			event.preventDefault();
+			
+			const formData = {
+				nom: document.getElementById('nom').value,
+				email: document.getElementById('email').value,
+				presence: document.getElementById('presence').value,
+				accompagnants: document.getElementById('accompagnants').value,
+				<!-- message: document.getElementById('message').value == Message : ${formData.message}-->
+			};
+
+			// Construction du lien mailto
+			const subject = `RSVP Mariage - ${formData.nom}`;
+			const body = `
+			Confirmation de présence de : ${formData.nom}
+			Présence : ${formData.presence}
+			Nombre d'accompagnants : ${formData.accompagnants}
+			Email : ${formData.email}
+
+			`;
+
+			const mailtoLink = `mailto:juletou03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+			window.location.href = mailtoLink;
+		}
+	</script>
+
+		<section id="livre-or" class="section">
+			<h2 class="section-title">Livre d'Or</h2>
+			<div class="guestbook">
+				<form class="rsvp-form">
+					<div class="form-group">
+						<label for="guestbook-message">Laissez un message aux mariés</label>
+						<textarea id="guestbook-message" rows="4" required></textarea>
+					</div>
+					<div class="form-group">
+						<label for="guestbook-name">Votre nom</label>
+						<input type="text" id="guestbook-name" required>
+					</div>
+					<button type="submit">Publier le message</button>
+				</form>
+				
+				<div class="guestbook-entries">
+					<!-- Les messages seront ajoutés ici dynamiquement -->
+				</div>
+			</div>
+		</section>
+		
+		 <section id="contact" class="section">
+			<h2 class="section-title">Nous Contacter</h2>
+				<p>Pour toute question concernant notre mariage, n'hésitez pas à nous contacter :</p>
+				<p>Email : <a href="mailto:contact@weddingofangevanessaandjeanpierre.love">contact@weddingofangevanessaandjeanpierre.love</a></p>
+				<p>Téléphone : +237 123 456 789</p>
+				<p>Adresse : 123 Avenue de l'Élégance, Douala, Cameroun</p>
+		 </section>
+
+		<footer>
+			<p>Mariage d'Ange Vanessa & Jean-Pierre</p>
+			<p>&copy; Samedi, 15 Février 2025 - Douala, Cameroun. Tous droits réservés.</p>
+		</footer>
+
+		<script>
+			const menuToggle = document.querySelector('.menu-toggle');
+			const sidebar = document.querySelector('.sidebar');
+
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('active');
+			});
+
+			// Ferme le menu si on clique en dehors
+			document.addEventListener('click', (e) => {
+				if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+					sidebar.classList.remove('active');
+				}
+			});
+	</script>	
+	
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
+        // Compte à rebours
+        function updateCountdown() {
+            const weddingDate = new Date('2025-02-15T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
 
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Ferme le menu si on clique en dehors
-        document.addEventListener('click', (e) => {
-            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-                sidebar.classList.remove('active');
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Animation de la navigation au scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.8)';
             }
         });
     </script>
+</main>    
 </body>
 </html>
