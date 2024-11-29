@@ -267,17 +267,48 @@
             background-color: var(--dark-gold);
         }
 		
+		
+		/* Portrait */
+			@media (orientation: portrait) {
+				.header {
+					height: 60vh; /* Réduit la hauteur pour portrait */
+				}
+
+				.gallery img {
+					max-height: 50vh; /* Limite la hauteur des images */
+				}
+			}
+
+			/* Paysage */
+			@media (orientation: landscape) {
+				.header {
+					height: 100vh; /* Utilise toute la hauteur en paysage */
+				}
+
+				.gallery img {
+					max-height: 40vh; /* Limite les images à 30% de l'écran */
+				}
+				
+				.nav-list {
+					height: auto;
+				}
+			}
+		
 
         @media (max-width: 768px) {
             .menu-toggle {
-                display: block;
+                display: none;
             }
 
             .sidebar {
-                transform: translateX(-100%);
-                width: 100%;
-                max-width: 300px;
-                box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+                display: block; /* Affiche la liste déroulante */
+				margin: 10px;
+				padding: 10px;
+				font-size: 1.2em;
+				border: 1px solid var(--gold);
+				background-color: var(--light-gold);
+				color: var(--dark-gold);
+				border-radius: 5px;
             }
 
             .sidebar.active {
@@ -299,16 +330,6 @@
 				  align-items: center;
 			}
         }
-		
-		@media (orientation: landscape) and (max-width: 768px) {
-		.header {
-			height: 70vh;
-		}
-
-		.gallery img {
-			max-height: 50vh;
-		}
-	}
     </style>
 </head>
 <body>
@@ -327,7 +348,7 @@
         <li><a href="#galery">Galérie Photos</a></li>
         <li><a href="#livre-or">Livre d'Or</a></li>
         <li><a href="#contact">Contact</a></li>
-		<a href="#"><img src="./images/carte.png"  alt="L'itinéraire" height="500" width="250" align="center"></a>
+		<a href="#"><img src="./images/tissu.png" height="500" width="250" align="center"></a>
         </ul>
 		
 		<!-- Liste déroulante pour smartphones -->
@@ -520,6 +541,15 @@
 				}
 			});
 		</script>
+		
+		<script>
+			document.getElementById("sidebar").addEventListener("change", function() {
+			if (this.value) {
+            window.location.href = this.value;
+				}
+			});
+		</script>
+
 	
     <script>
         // Compte à rebours
