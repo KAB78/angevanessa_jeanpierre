@@ -155,9 +155,9 @@
             grid-template-columns: auto;
 			justify-content: center;
             gap: 2em;
-            <!-- background: white; -->
+            background: white;
             padding: 2em;
-            <!-- border-radius: 10px; -->
+            border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 			text-align: center;
         }
@@ -169,6 +169,7 @@
          
             border-radius: 8px;
         }
+		
 		
 		.rsvp-form {
             max-width: 600px;
@@ -183,6 +184,16 @@
             margin-bottom: 1.5em;
 			color: var(--dark-gold);
         }
+		
+		.ceremony-details {
+		  line-height: 1.8;
+		  color: var(--dark-gold);
+		}
+		
+		.story-content {
+		  line-height: 1.8;
+		  color: var(--dark-gold);
+		}
 
         input, textarea, select {
             width: 100%;
@@ -256,44 +267,6 @@
             background-color: var(--dark-gold);
         }
 		
-		#cache {
-			position:absolute;
-			background:rgba(0,0,0,0);
-			top:0;
-			right:0;
-			bottom:0;
-			left:0;
-			z-index: -1;
-			transition:background .5s
-		}
-		
-		#cache:target {
-			background:rgba(0,0,0,.5);
-			z-index: 1;
-		}
-		.popup {
-			position:absolute;
-			z-index: 1000;
-			display:none;
-			top:30px;
-			left:300px;
-		}
-		.popup a {
-			position:absolute;
-			background: #333;
-			color:#fff;
-			border-radius: 50%;
-			width:20px;
-			line-height: 20px;
-			text-align: center;
-			font-family:arial;
-			right:0;
-			text-decoration: none;
-		}
-		
-		#cache:target ~ .popup {
-			display:block;
-		}
 		
 		/* Portrait */
 			@media (orientation: portrait) {
@@ -434,9 +407,10 @@
         <h4 class="section-title">Lieu de Réception</h4>
         <div class="location-container">
             <div class="location-info">
-                <h4>La Cérémonie Réligieuse</h4>
+                
                 <div class="ceremony-details">
-              <p>Cathédrale Saint-Pierre & Paul de Douala | Boulevard de la Liberté | 13h00 - 15h00</p> <br>
+				<h4>La Cérémonie Réligieuse</h4>
+              <p>Cathédrale Saint-Pierre & Paul de Bonadibong - Akwa | 13h00 - 15h00</p> <br>
                 <h4>Le Dîner Dansant</h4>
                 <p>Hôtel Best Western - Aéroport de Douala | 19h00 - 04h00</p>
             </div>
@@ -562,7 +536,7 @@
 					sidebar.classList.remove('active');
 				}
 			});
-	</script>	
+		</script>
 	
     <script>
         // Compte à rebours
