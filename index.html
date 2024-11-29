@@ -121,12 +121,6 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 		
-		.hero-image {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-		
 		 .section {
             padding: 5em 3em;
             max-width: 900px;
@@ -166,7 +160,6 @@
             height: 400px;
 			width : auto;
 			text-align: center;
-         
             border-radius: 8px;
         }
 		
@@ -251,7 +244,7 @@
             color: var(--gold);
         }
 		
-		button {
+		.button {
             background-color: var(--gold);
             color: white;
             padding: 1em 2em;
@@ -261,10 +254,6 @@
             width: 100%;
             font-size: 1.1em;
             transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: var(--dark-gold);
         }
 		
 		
@@ -277,6 +266,13 @@
 				.gallery img {
 					max-height: 50vh; /* Limite la hauteur des images */
 				}
+				
+				.location-container {
+				  display: flex;
+				  height: 100%;
+				  justify-content: center;
+				  align-items: center;
+			}
 			}
 
 			/* Paysage */
@@ -321,13 +317,6 @@
 			
 			.header h1 {
 				font-size: 2.5em;
-			}
-			
-			.location-container {
-				display: flex;
-				  height: 100%;
-				  justify-content: center;
-				  align-items: center;
 			}
         }
     </style>
