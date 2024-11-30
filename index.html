@@ -248,7 +248,7 @@
             color: var(--gold);
         }
 		
-		.button {
+		button {
             background-color: var(--gold);
             color: white;
             padding: 1em 2em;
@@ -258,6 +258,10 @@
             width: 100%;
             font-size: 1.1em;
             transition: background-color 0.3s ease;
+        }
+		
+		button:hover {
+            background-color: var(--dark-gold);
         }
 		
 		
@@ -271,9 +275,6 @@
 				max-height: 50vh; /* Limite la hauteur des images */
 			}
 				
-			.container {
-				text-align: center;
-			}
 		}
 
 			/* Paysage */
@@ -294,9 +295,6 @@
                 transform: translateX(0);
 			}
 			
-			.container {
-        text-align: center;
-    }
 		}	
 		
 
@@ -326,6 +324,10 @@
 			
 			.header h1 {
 				font-size: 2.5em;
+			}
+			
+			.container {
+				text-align: center;
 			}
         }
     </style>
