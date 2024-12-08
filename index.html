@@ -1,597 +1,499 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariage d'Ange Vanessa & Jean-Pierre</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #D4AF37;
-            --light-gold: #F4E7BE;
-            --beige: #F5F5DC;
-            --dark-gold: #996515;
-        }
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Wedding &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cormorant Garamond', serif;
-        }
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-        body {
-            background-color: var(--beige);
-            color: #333;
-            line-height: 1.5;
-        }
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
 		
-
-        .header {
-			background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./images/njoh3_1.png');
-            background-position: center;
-            background-size: center;
-            position: relative;
-            height: 100vh;
-			
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: beige;
-            display: flex;
-			justify-content: center;
-            align-items: center;
-        }
-		
-		<!-- .header {
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./images/njoh3.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        } -->
-		
-		.headers {
-            background: var(--gold);
-            color: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-			top: 0
-        }
-
-        .sidebar {
-            background: #f4f4f4;
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding-top: 60px;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-list {
-            list-style: none;
-        }
-
-        .nav-list li {
-            padding: 1rem;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .nav-list a {
-            color: var(--dark-gold);
-            text-decoration: none;
-        }
-
-        .content {
-            margin-left: 250px;
-            padding: 80px 20px 20px;
-        }
-		
-		.header-content {
-            position: center;
-            z-index: 1;
-		}
-		
-		.header h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            font-weight: 300;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-		
-		 .section {
-            padding: 5em 3em;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--dark-gold);
-            font-size: 2.5em;
-            margin-bottom: 2.5em;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: var(--gold);
-            margin: 20px auto;
-        }
-
-        .location-container {
-            display: grid;
-            grid-template-columns: auto;
-			justify-content: center;
-            gap: 2em;
-            background: white;
-            padding: 2em;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-			text-align: center;
-        }
-		
-			.location-container > img {
-			width: 100px;
-			}
-
-        .img {
-            height: 400px;
-			width : auto;
-			text-align: center;
-            border-radius: 8px;
-        }
-		
-		
-		.rsvp-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 3em;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5em;
-			color: var(--dark-gold);
-        }
-		
-		.ceremony-details {
-		  line-height: 1.8;
-		  color: var(--dark-gold);
-		}
-		
-		.story-content {
-		  line-height: 1.8;
-		  color: var(--dark-gold);
-		}
-
-        input, textarea, select {
-            width: 100%;
-            padding: 1em;
-            margin-top: 0.5em;
-            border: 1px solid var(--light-gold);
-            border-radius: 4px;
-            font-size: 1em;
-        }
-		
-		.guestbook {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-		
-		.guestbook-entry {
-            background: white;
-            padding: 2em;
-            margin-bottom: 1em;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: var(--gold);
-            color: white;
-            text-align: center;
-            padding: 3em;
-            margin-top: 3em;
-        }
-		
-		.date-lieu {
-            font-size: 1.8em;
-            margin-bottom: 40px;
-        }
-		
-		.countdown {
-            background: rgba(255,255,255,0.9);
-            padding: 2em;
-            border-radius: 10px;
-            color: var(--dark-gold);
-            margin-top: 2em;
-            display: flex;
-            gap: 2em;
-			justify-content: center;
-        }
-
-        .countdown-item {
-            text-align: center;
-        }
-
-        .countdown-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: var(--gold);
-        }
-		
-		button {
-            background-color: var(--gold);
-            color: white;
-            padding: 1em 2em;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-		
-		button:hover {
-            background-color: var(--dark-gold);
-        }
-		
-		
-		/* Portrait */
-		@media (orientation: portrait) {
-			.header {
-				height: 60vh; /* Réduit la hauteur pour portrait */
-			}
-				
-			.gallery img {
-				max-height: 50vh; /* Limite la hauteur des images */
-			}
-				
-		}
-
-			/* Paysage */
-			@media (orientation: landscape) {
-				.header {
-					height: 100vh; /* Utilise toute la hauteur en paysage */
-				}
-
-				.gallery img {
-					max-height: 40vh; /* Limite les images à 30% de l'écran */
-				}
-				
-				.nav-list {
-					height: auto;
-				}
-				
-				.sidebar.active {
-                transform: translateX(0);
-			}
-			
-		}	
-		
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .sidebar {
-                display: block; /* Affiche la liste déroulante */
-				margin: 20px;
-				padding: 10px;
-				font-size: 1.2em;
-				border: 1px solid var(--gold);
-				background-color: var(--light-gold);
-				color: var(--dark-gold);
-				border-radius: 5px;
-            }
-
-            .sidebar.active {
-                transform: translateX(0);
-            }
-
-            .content {
-                margin-left: 0;
-            }
-			
-			.header content {
-				font-size: 2.5em;
-			}
-			
-			.location-container {
-				text-align: center;
-			}
-			
-			.gallery img {
-				max-height: 50vh;
-			}
-			
-			.galery img:hover {
-				transform: scale(1.05);
-			}
-			
-        }
-    </style>
-</head>
-<body>
-    <headers class="headers">
-        <button class="menu-toggle">☰</button>
-        <h1>Notre Union</h1>
-    </headers>
-
-    <nav class="sidebar">
-		<!-- Barre de menu classique -->
-        <ul class="nav-list">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#notre-histoire">Notre Histoire</a></li>
-        <li><a href="#lieu">Lieu</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
-        <li><a href="#galery">Galérie Photos</a></li>
-        <li><a href="#livre-or">Livre d'Or</a></li>
-        <li><a href="#contact">Contact</a></li>
-		<a href="#"><img src="./images/tissu.png" height="500" width="250" align="center"></a>
-        </ul>
-		
-		<!-- Liste déroulante pour smartphones -->
-    <!-- <select class="menu-toggle" id="menu-toggle" onchange="location = this.value;"> -->
-    <select class="menu-toggle">    
-        <option value="#accueil">Accueil</option>
-        <option value="#notre-histoire">Notre Histoire</option>
-        <option value="#lieu">Lieu</option>
-        <option value="#rsvp">RSVP</option>
-        <option value="#galery">Galérie  Photos</option>
-        <option value="#livre-or">Livre d'Or</option>
-        <option value="#contact">Contact</option>
-    </select>
-    </nav>
-
-   <!--  <main class="content">
-        <h2>Contenu Principal</h2>
-        <p>Votre contenu ici...</p>
-    </main> -->
-
-<main class="content">
-	<section id="accueil">	
-		<div class="header">
-			<div class="header-content">
-				<h2>Ange Vanessa & Jean-Pierre</h2>
-					<p>Célébrons notre Amour dans un cadre élégant sous le signe de la beauté et l'élégance</p>
-				<div class="date-lieu">
-					<p>15 Février 2025 | Douala, Cameroun</p>
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html">Notre Union<strong>.</strong></a></div>
 				</div>
-				<div class="countdown">
-					<div class="countdown-item">
-						<div class="countdown-number" id="days">00</div>
-						<div>Jours</div>
-					</div>
-					<div class="countdown-item">
-						<div class="countdown-number" id="hours">00</div>
-						<div>Heures</div>
-					</div>
-					<div class="countdown-item">
-						<div class="countdown-number" id="minutes">00</div>
-						<div>Minutes</div>
-					</div>
-					<div class="countdown-item">
-						<div class="countdown-number" id="seconds">00</div>
-						<div>Secondes</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Acceuil</a></li>
+						<li><a href="about.html">Notre histoire</a></li>
+						<!-- <li class="has-dropdown">
+							<a href="services.html">Services</a>
+							<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>
+						</li> -->
+						<li class="has-dropdown">
+							<a href="gallery.html">Galérie Photos</a>
+							<!-- <div class="galery">
+								
+							</div> -->
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/njoh3.png);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Ange Vanessa &amp; Jean-Pierre</h1>
+							<h2>Célébrons notre Amour dans un cadre élégant sous le signe de la beauté et l'élégance</h2>
+							<div class="simply-countdown simply-countdown-one"></div>
+							<p><a href="#" class="btn btn-default btn-sm">Réservez la date</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	
-	 <section id="notre-histoire" class="section">
-        <h3 class="section-title">Notre Histoire</h2>
-        <div class="story-content">
-            [Votre histoire d'amour ici]
-        </div>
-    </section>
+	</header>
 
-    <section id="lieu" class="section">
-        <h4 class="section-title">Lieu de Réception</h4>
-        <div class="location-container">
-            <div class="location-info">
-                
-                <div class="ceremony-details">
-				<h4>La Cérémonie Réligieuse</h4>
-              <p>Cathédrale Saint-Pierre & Paul de Bonadibong - Akwa | 13h00 - 15h00</p> <br>
-                <h4>Le Dîner Dansant</h4>
-                <p>Hôtel Best Western - Aéroport de Douala | 19h00 - 04h00</p>
-            </div>
-			 <br>
-			 <br>
-            <div class="img">
-					<a href="./images/carte.png">
-					<img src="./images/carte.png"  alt="L'itinéraire" width="500" height="400" align="center">
-					
-					</a>
-            </div>
-        </div>
-    </section>
-	
-	<section id="galery" class="section">
-		<h2 class="section-title">Galérie Photos</h2>
-		<div class="galery">
-			<img src="./images/njoh1.png" alt="Photo 1">
-			<img src="./images/njoh2.png" alt="Photo 2">
+	<div id="fh5co-couple">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Bonjour!</h2>
+					<h3>15 Février 2025 | Douala, Cameroun</h3>
+					<p>Nous vous avons invité à célébrer notre mariage</p>
+				</div>
+			</div>
+			<div class="couple-wrap animate-box">
+				<div class="couple-half">
+					<div class="groom">
+						<img src="images/JP.png" alt="groom" class="img-responsive">
+					</div>
+					<div class="desc-groom">
+						<h3>Jean-Pierre</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+					</div>
+				</div>
+				<p class="heart text-center"><i class="icon-heart2"></i></p>
+				<div class="couple-half">
+					<div class="bride">
+						<img src="images/Vanessa.png" alt="groom" class="img-responsive">
+					</div>
+					<div class="desc-bride">
+						<h3>Ange Vanessa</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
 
-    <!-- Mise à jour du formulaire RSVP -->
-		<section id="rsvp" class="section">
-			<h3 class="section-title">RSVP (Confirmer ou pas votre présence)</h3>
-			<form class="rsvp-form" onsubmit="sendEmail(event)">
-				<div class="form-group">
-					<label for="nom">Nom complet</label>
-					<input type="text" id="nom" name="nom" required>
+	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Nos événements principaux</span>
+					<h2>Événements de mariage</h2>
 				</div>
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email" required>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<!-- <div class="col-md-10 col-md-offset-1">
+							<div class="col-md-6 col-sm-6 text-center"> -->
+						<div class="row col-md-12 col-md-offset-1 mx-auto">
+							<div class="col-md-4 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Cérémonie du Abélé</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>09:00</span>
+										<span>11:00</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-location2"></i>
+										<p>Chefferie Bonamouti (Deido Plage), Douala</p>
+									</div>
+							
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Bénédiction nuptiale</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>12:30</span>
+										<span>15:00</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-location2"></i>
+										<p>Cathédrale Saint-Pierre & Paul, Bonadibong - Akwa, Douala</p>
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Diner dansant</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>19:00</span>
+										<span>04:00</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-location2"></i>
+										<p>Hôtel Best Western - Aéroport de Douala</p>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="presence">Serez-vous présent(e) ?</label>
-					<select id="presence" name="presence" required>
-						<option value="">Choisir...</option>
-						<option value="oui">Oui, je serai présent(e)</option>
-						<option value="non">Non, je ne pourrai pas être présent(e)</option>
-					</select>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-couple-story">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Nous nous aimons</span>
+					<h2>Notre histoire</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 				</div>
-				<div class="form-group">
-					<label for="accompagnants">Nombre d'accompagnants</label>
-					<input type="number" id="accompagnants" name="accompagnants" min="0" value="0">
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline animate-box">
+						<li class="animate-box">
+							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Notre première rencontre</h3>
+									<span class="date">December 25, 2015</span>
+								</div>
+								<div class="timeline-body">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Premier rendez-vous</h3>
+									<span class="date">December 28, 2015</span>
+								</div>
+								<div class="timeline-body">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</li>
+						<li class="animate-box">
+							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Dans la relation</h3>
+									<span class="date">January 1, 2016</span>
+								</div>
+								<div class="timeline-body">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</li>
+			    	</ul>
 				</div>
-				<button type="submit">Confirmer ma présence</button>
-			</form>
-		</section>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Nos souvenirs</span>
+					<h2>Galérie photos</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<ul id="fh5co-gallery-list">
+						
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/njoh1.png); "> 
+						<a href="images/gallery-1.jpg">
+							<div class="case-studies-summary">
+	
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/njoh2.png); ">
+						<a href="#" class="color-2">
+							<div class="case-studies-summary">
+	
+							</div>
+						</a>
+					</li>
+
+
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/njoh3.png); ">
+						<a href="#" class="color-3">
+							<div class="case-studies-summary">
+	
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/JP.png); ">
+						<a href="#" class="color-4">
+							<div class="case-studies-summary">
+
+							</div>
+						</a>
+					</li>
+
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/Vanessa.png); ">
+							<a href="#" class="color-3">
+								<div class="case-studies-summary">
+								</div>
+							</a>
+						</li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/tissu.png); ">
+							<a href="#" class="color-4">
+								<div class="case-studies-summary">
+
+								</div>
+							</a>
+						</li>
+
+					</ul>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-testimonial">
+		<div class="container">
+			<div class="row">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>Best Wishes</span>
+						<h2>Friends Wishes</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 animate-box">
+						<div class="wrap-testimony">
+							<div class="owl-carousel-fullwidth">
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="images/couple-1.jpg" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="images/couple-2.jpg" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide active text-center">
+										<figure>
+											<img src="images/couple-3.jpg" alt="user">
+										</figure>
+										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+										<blockquote>
+											<p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Seriez-vous présent?</h2>
+					<p>Merci de remplir le formulaire pour nous confirmer de votre présence. Merci d'avance.</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="row col-md-8 col-md-offset-1 mx-auto>
+					<form class="form-inline">
+						<div class="col-md-4 col-sm-4 text-center">
+							<div class="form-group">
+								<label for="name" class="sr-only">Nom</label>
+								<input type="name" class="form-control" id="name" placeholder="Nom">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 text-center">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 text-center">
+							<div class="form-group">
+								<label for="presence" class="sr-only">Choix</label>
+								<!-- <input type="presence" class="form-control" id="presence" placeholder="Choix"> -->
+									<select id="presence" name="presence" required>
+										<option value="">Choisir...</option>
+										<option value="oui">Oui, je serai présent(e)</option>
+										<option value="non">Non, je ne pourrai pas être présent(e)</option>
+									</select>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 text-center">
+							<button type="submit" class="btn btn-default btn-block">Je Confirme</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2025 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
 
 	<script>
-		function sendEmail(event) {
-			event.preventDefault();
-			
-			const formData = {
-				nom: document.getElementById('nom').value,
-				email: document.getElementById('email').value,
-				presence: document.getElementById('presence').value,
-				accompagnants: document.getElementById('accompagnants').value,
-				<!-- message: document.getElementById('message').value == Message : ${formData.message}-->
-			};
+    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
-			// Construction du lien mailto
-			const subject = `RSVP Mariage - ${formData.nom}`;
-			const body = `
-			Confirmation de présence de : ${formData.nom}
-			Présence : ${formData.presence}
-			Nombre d'accompagnants : ${formData.accompagnants}
-			Email : ${formData.email}
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
 
-			`;
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+</script>
 
-			const mailtoLink = `mailto:juletou03@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-			window.location.href = mailtoLink;
-		}
-	</script>
-
-		<section id="livre-or" class="section">
-			<h2 class="section-title">Livre d'Or</h2>
-			<div class="guestbook">
-				<form class="rsvp-form">
-					<div class="form-group">
-						<label for="guestbook-message">Laissez un message aux mariés</label>
-						<textarea id="guestbook-message" rows="4" required></textarea>
-					</div>
-					<div class="form-group">
-						<label for="guestbook-name">Votre nom</label>
-						<input type="text" id="guestbook-name" required>
-					</div>
-					<button type="submit">Publier le message</button>
-				</form>
-				
-				<div class="guestbook-entries">
-					<!-- Les messages seront ajoutés ici dynamiquement -->
-				</div>
-			</div>
-		</section>
-		
-		 <section id="contact" class="section">
-			<h2 class="section-title">Nous Contacter</h2>
-				<p>Pour toute question concernant notre mariage, n'hésitez pas à nous contacter :</p>
-				<p>Email : <a href="mailto:contact@weddingofangevanessaandjeanpierre.love">contact@weddingofangevanessaandjeanpierre.love</a></p>
-				<p>Téléphone : +237 123 456 789</p>
-				<p>Adresse : 15 Rue de l'orphélinat, Lille - France</p>
-		 </section>
-
-		<footer>
-			<p>Mariage d'Ange Vanessa & Jean-Pierre</p>
-			<p>&copy; Samedi, 15 Février 2025 - Douala, Cameroun. Tous droits réservés.</p>
-		</footer>
-
-		<script>
-			const menuToggle = document.querySelector('.menu-toggle');
-			const sidebar = document.querySelector('.sidebar');
-
-			menuToggle.addEventListener('click', () => {
-				sidebar.classList.toggle('active');
-			});
-
-			// Ferme le menu si on clique en dehors
-			document.addEventListener('click', (e) => {
-				if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-					sidebar.classList.remove('active');
-				}
-			});
-		</script>
-		
-		<script>
-			document.getElementById("sidebar").addEventListener("change", function() {
-			if (this.value) {
-            window.location.href = this.value;
-				}
-			});
-		</script>
-
-	
-    <script>
-        // Compte à rebours
-        function updateCountdown() {
-            const weddingDate = new Date('2025-02-15T00:00:00').getTime();
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // Animation de la navigation au scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav-list');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255,255,255,0.95)';
-            } else {
-                nav.style.background = 'rgba(255,255,255,0.8)';
-            }
-        });
-    </script>
-</main>    
-</body>
+	</body>
 </html>
+
